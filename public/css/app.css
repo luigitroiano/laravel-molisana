@@ -49,8 +49,50 @@ main .container_cards {
   flex-wrap: wrap;
 }
 
-main .container_cards img {
+main .container_cards .container_image {
+  position: relative;
   width: calc(100%/3);
+}
+
+main .container_cards .container_image .image {
+  display: block;
+  width: 100%;
   padding: 20px;
+  transition: 0.5s ease;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+main .container_cards .container_image:hover .image {
+  opacity: 0.3;
+}
+
+main .container_cards .container_image:hover .overlay_content {
+  opacity: 1;
+}
+
+main .container_cards .overlay_content {
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+main .container_cards .overlay_content .overlay_image {
+  width: 40px;
+}
+
+main .container_cards .overlay_content a {
+  text-decoration: none;
+  color: #002D75;
+  line-height: 3;
 }
 

@@ -11,8 +11,18 @@ La Molisana | Products
     @foreach($data as $pasta)
     @if ($pasta['tipo'] === 'lunga')
 
-    <img src="{{ $pasta['src'] }}" alt="">
-    
+    <div class="container_image">
+      <img class="image" src="{{ $pasta['src'] }}" alt="">
+      <div class="overlay">
+        <div class="overlay_content">
+          <img class="overlay_image" src="{{ asset('/img/icon.svg') }}" alt="">
+          <a href="#">
+            <h3>{{ $pasta['titolo'] }}</h3>
+          </a>
+        </div>
+      </div>
+    </div>
+
     @endif
     @endforeach
   </div>
@@ -22,17 +32,38 @@ La Molisana | Products
     @foreach($data as $pasta)
     @if ($pasta['tipo'] === 'corta')
 
-    <img src="{{ $pasta['src'] }}" alt="">
-    
+    <div class="container_image">
+      <img class="image" src="{{ $pasta['src'] }}" alt="">
+      <div class="overlay">
+        <div class="overlay_content">
+          <img class="overlay_image" src="{{ asset('/img/icon.svg') }}" alt="">
+          <a href="#">
+            <h3>{{ $pasta['titolo'] }}</h3>
+          </a>
+        </div>
+      </div>
+    </div>
+
     @endif
     @endforeach
   </div>
+
   <h2>LE CORTISSIME</h2>
   <div class="container_cards">
     @foreach($data as $pasta)
     @if ($pasta['tipo'] === 'cortissima')
 
-    <img src="{{ $pasta['src'] }}" alt="">
+    <div class="container_image">
+      <img class="image" src="{{ $pasta['src'] }}" alt="">
+      <div class="overlay">
+        <div class="overlay_content">
+          <img class="overlay_image" src="{{ asset('/img/icon.svg') }}" alt="">
+          <a href="#">
+            <h3>{{ $pasta['titolo'] }}</h3>
+          </a>
+        </div>
+      </div>
+    </div>
 
     @endif
     @endforeach
