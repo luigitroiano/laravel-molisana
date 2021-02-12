@@ -15,12 +15,14 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('home');
-});
+}) -> name('home');
 
 Route::get('product', function () {
-    return view('products');
-});
+    $data = json_decode(config('dati.pasta'), true);
+    
+    return view('products', compact('data'));
+}) ->name('products');
 
-Route::get('contact-us', function () {
+Route::get('contacts', function () {
     return view('contact');
-});
+}) ->name('contact-us');
