@@ -17,8 +17,12 @@ Route::get('/', function () {
     return view('home');
 }) -> name('home');
 
-Route::get('product', function () {
-    $data = json_decode(config('dati.pasta'), true);
+Route::get('products', function () {
+
+    $data = json_decode(config('data.pasta'), true);
+    //$data = utf8_encode($data);
+    //dd(trim(json_decode($data, true)), '\n');
+    //$data = config('data.pasta');
     
     return view('products', compact('data'));
 }) ->name('products');

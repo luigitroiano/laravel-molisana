@@ -1,1 +1,32 @@
-//
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+header{
+  .logo{
+    display: flex;
+    justify-content: center;
+  }
+}
+nav{
+  padding: 20px 0;
+  background-color: #B1D281;
+  display: flex;
+  justify-content: center;
+  a{
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: large;
+    padding: 0 5px;
+    &:hover{
+      color: #002D75;
+    }
+  }
+  .active{
+    border-bottom: 5px solid #002D75;
+    border-radius: 2px;
+    color: #002D75;
+  }
+}
