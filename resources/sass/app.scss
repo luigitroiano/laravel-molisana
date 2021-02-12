@@ -8,25 +8,43 @@ header{
     display: flex;
     justify-content: center;
   }
-}
-nav{
-  padding: 20px 0;
-  background-color: #B1D281;
-  display: flex;
-  justify-content: center;
-  a{
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: large;
-    padding: 0 5px;
-    &:hover{
+  nav{
+    padding: 20px 0;
+    background-color: #B1D281;
+    display: flex;
+    justify-content: center;
+    a{
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: large;
+      padding: 0 5px;
+      &:hover{
+        color: #002D75;
+      }
+    }
+    .active{
+      border-bottom: 5px solid #002D75;
+      border-radius: 2px;
       color: #002D75;
     }
   }
-  .active{
-    border-bottom: 5px solid #002D75;
-    border-radius: 2px;
+}
+main{
+  background-image: url("/img/fondo-pag-speciali.jpg");
+  h2{
+    text-align: center;
     color: #002D75;
+    padding: 20px 0 10px 0;
+  }
+  .container_cards{
+    display: flex;
+    flex-wrap: wrap;
+    
+    img{
+      width: calc(100%/3);
+      padding: 20px;
+    }
+    
   }
 }

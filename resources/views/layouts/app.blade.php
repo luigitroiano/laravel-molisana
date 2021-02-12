@@ -25,6 +25,7 @@
       <a href="{{ route('contact-us') }}" class=" {{ Route::currentRouteName() === 'contact-us' ? 'active' : ''}}">Contact</a>
     </nav>
   </header>
+  
   @yield('main')
   
 
